@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML DOM 动画</title>
+	<style>
+		#con{
+			width: 400px;
+			height: 400px;
+			border-radius: 10px;
+			/*定位属性：相对定位*/
+			position: relative;
+			background: #9193E5;
+		}
+		#animate{
+			width: 50px;
+			height: 50px;
+			/*绝对定位*/
+			position: absolute;
+			background: #E8999A;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<!--使用 JavaScript 来创建 HTML 动画-->
+<body>
+	<h1>我得第一个JavaScript动画</h1>
+	<p><button onClick="move()">点击我</button></p>
+	<!--动画容器-->
+	<div id="con">
+		<div id="animate"></div>
+	</div>
+<!--
+JavaScript 动画是通过对元素样式进行渐进式变化编程完成的。
+这种变化通过一个计数器来调用。当计数器间隔很小时，动画看上去就是连贯的。
+-->
+	<script>
+		function move(){
+			var elem = document.getElementById("animate");//获取到对象
+			var pos = 0;
+			var id = setInterval(frame,5);//setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式
+			
+			function frame(){
+				//测试动画是否完成
+				if(pos == 350){//350加上自身的50正好等于400，可将上方的样式改成500，效果明显
+					clearInterval(id);//clearInterval() 方法可取消由 setInterval() 函数设定的定时执行操作，参数必须是由 setInterval() 返回的 ID 值
+				}else{
+					//改变元素样式
+					pos++;
+					elem.style.top = pos + "px";
+					elem.style.left = pos + "px";
+				}
+			}
+			
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BOM</title>
+</head>
+
+<body>
+	<h2>window.location 对象可用于获取当前页面地址（URL）并把浏览器重定向到新页面</h2>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	<p id="demo4"></p>
+	<button onClick="myfunction()">重新加载文档</button>
+	
+	<script>
+		document.getElementById("demo").innerHTML = "页面完整的URL是：" + location.href;
+		document.getElementById("demo1").innerHTML = "页面的主机名是：" + location.hostname;
+		document.getElementById("demo2").innerHTML = "页面的路径是：" + location.pathname;
+		document.getElementById("demo3").innerHTML = "页面的协议是：" + location.protocol;
+		document.getElementById("demo4").innerHTML = "端口号是：" + location.port;
+		
+		function myfunction(){
+			location.assign("http://www.w3school.com.cn");
+			alert("已经加载好了");
+		}
+	</script>
+</body>
+</html>

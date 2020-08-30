@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>日期字符串化</title>
+</head>
+<!--注意和demo10对比-->
+<body>
+	<h1>JSON.stringify 会把任何日期对象转换为字符串</h1>
+	<p id="demo"></p>
+	<script>		//创建js对象，包含日期对象
+		var obj = {name:"william",today:new Date(),age:"20"};
+		//将日期对象转成字符串
+		var myJSON = JSON.stringify(obj);
+		document.getElementById("demo").innerHTML = myJSON;
+	</script>
+</body>
+</html>

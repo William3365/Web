@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML DOM 事件</title>
+	<script>
+		function myfunction(){
+			var x = document.getElementById("name");
+			x.value = x.value.toUpperCase();
+		}
+		function myfunction2(x){
+			x.style.backgroundColor = "yellow";
+		}
+	</script>
+</head>
+
+<body>
+	<p>onchange 事件，经常与输入字段验证结合使用</p>
+	<p style="color: red">离开输入字段时，会触发一个函数，将输入文本转换为大写</p>
+	<hr>
+	<p>onFocus 事件</p>
+	<p>当输入字段获得焦点时，将触发一个更改背景颜色的函数</p>
+	<hr>
+	请输入你的英文名：<input type="text" id="name" onChange="myfunction()" onFocus="myfunction2(this)">
+</body>
+</html>

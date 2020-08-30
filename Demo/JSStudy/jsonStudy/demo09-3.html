@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>交换数据</title>
+</head>
+<!--通过 local storage 存储并取回数据-->
+<body>
+	<h2>交换数据</h2>
+	<p id="demo"></p>
+	<script>
+		var myObj,myJson,txt,obj;
+		//存储数据
+		myObj = {name:"tft",age:"20",sex:"boy"};//创建js对象
+		myJson = JSON.stringify(myObj);//将js对象转成json字符串
+		localStorage.setItem("JSONtext",myJson);//将json字符串存为文本数据
+		
+		//取出数据
+		txt = localStorage.getItem("JSONtext");//取出json文本数据
+		obj = JSON.parse(txt);//将json数据转成js对象
+		//访问js对象的两种方式
+		document.getElementById("demo").innerHTML = obj.name + "-" + obj.age + "-" + obj["sex"];//访问js对象，并通过id显示在标签
+	</script>
+</body>
+</html>

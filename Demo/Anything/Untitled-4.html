@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS函数</title>
+</head>
+
+<body>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	
+	<script>
+		//表达式定义函数
+		//存放在变量中的函数不需要名字，因为总是使用变量名来调用
+		var x = function (a,b){return a * b};//没有函数名称，匿名函数
+		document.getElementById("demo").innerHTML = x(3,4);
+	</script>
+	<script>
+		//箭头函数，IE11以前不支持箭头函数
+		const x = (x, y) => x * y;
+		document.getElementById("demo1").innerHTML = x(5, 5);
+	</script>
+	<script>
+		//新建三个p对象
+		var p = {
+			fullName:function(){
+				return this.name + this.age;
+			}
+		}
+		var p1 = {name:"汤冯涛",age:20}
+		var p2 = {name:"William",age:16}
+		//call方法，能使用属于另一个对象的方法
+		var x = p.fullName.call(p2);//p调用fullName方法，作用于p2
+		document.getElementById("demo2").innerHTML = x;//返回p2的值
+	</script>
+	<script>
+		var p = {
+			fullName:function(){
+				return this.name + this.age;
+			}
+		}
+		var p1 = {name:"汤冯涛",age:20}
+		var p2 = {name:"William",age:16}
+		//apply方法，注意与call的区别
+		var x = p.fullName.apply(p1);
+		document.getElementById("demo3").innerHTML = x;
+	</script>
+</body>
+</html>

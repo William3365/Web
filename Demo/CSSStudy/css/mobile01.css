@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+/*用于计算机显示器*/
+@media screen{
+div{
+	width: 400px;
+	height: 300px;
+	margin:  100px auto;
+	color: aqua;
+	border: 2px solid #27E431;
+	font-size: 28px;
+	text-align: center;
+	}
+}
+/*打印设备用*/
+@media print{
+div{
+	width: 400px;
+	height: 300px;
+	margin:  100px auto;
+	color: aqua;
+	border: 2px solid #27E431;
+	font-size: 28px;
+	text-align: center;
+	background: #E3DF7B;
+	}
+}

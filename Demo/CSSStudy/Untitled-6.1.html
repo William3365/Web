@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示框</title>
+    <style>
+        .t {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .t .tt {
+            width: 120px;
+            background-color: #f1f1f1;
+            text-align: center;
+            visibility: hidden;
+            position: absolute;
+            z-index: 1;
+        }
+        
+        .t:hover .tt {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="t">
+        鼠标放在此处
+        <span class="tt">花里胡哨</span>
+        <br>
+        <br>
+        <br>
+        <p>显示一个提示框的几个步骤,带方向定位的需要修改定位</p>
+    </div>
+</body>
+
+</html>

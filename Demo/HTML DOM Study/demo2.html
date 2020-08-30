@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML DOM 元素</title>
+	<style>
+		.p1{
+			color: blue;
+		}
+	</style>
+</head>
+
+<body>
+<!--	
+通过 id 查找 HTML 元素
+通过标签名查找 HTML 元素
+通过类名查找 HTML 元素
+通过 CSS 选择器查找 HTML 元素
+通过 HTML 对象集合查找 HTML 元素
+-->
+	
+	<p id="intor">Hello William</p>
+	<p id="demo1"></p>
+	
+	<div id="main" style="background-color: aquamarine">
+		<p>汤冯涛</p>
+		<p>William</p>
+	</div>
+	<p class="p1">通过类名1</p>
+	<p class="p1">通过类名2</p>
+	
+<!--//通过id查找元素-->
+	<!--<script>
+		var s = document.getElementById("intor");
+		document.getElementById("demo1").innerHTML = "来自intor段落的文本: " + s.innerHTML;
+	</script>-->
+	
+<!--通过标签查找元素-->
+	<!--<script>
+		//查找所有的p元素
+		var x = document.getElementsByTagName("p");
+		document.getElementById("demo1").innerHTML = "第一段文本是：" + x[0].innerHTML;
+	</script>-->
+	<!--<script>
+		//查找 id="main" 的元素，然后查找 "main" 中所有 <p> 元素
+		var x = document.getElementById("main");
+		var y = x.getElementsByTagName("p");
+		document.getElementById("demo1").innerHTML = "main中的第一个p标签是：" + y[0].innerHTML;
+	</script>-->
+<!--通过类名查找元素-->
+	<!--<script>
+		var x = document.getElementsByClassName("p1");
+		document.getElementById("demo1").innerHTML = "类名查找，第一个类： " + x[0].innerHTML;
+	</script>-->
+<!--通过选择器查找-->
+	<!--<script>
+		var x = document.querySelectorAll("p.p1");
+		document.getElementById("demo1").innerHTML = "class为p1的第二个元素：" + x[1].innerHTML;
+	</script>-->
+<!--通过 HTML 对象选择器查找 HTML 对象-->
+	<script>
+		//暂时不写！情况略复杂
+	</script>
+</body>
+</html>

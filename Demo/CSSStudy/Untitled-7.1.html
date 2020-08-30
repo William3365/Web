@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>响应式</title>
+    <style>
+        * {
+            /* 盒子大小包括边框和内边距 */
+            box-sizing: border-box;
+        }
+        
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+        
+        .img {
+            border: 1px solid #f1f1f1;
+        }
+        
+        .img:hover {
+            border: 1px solid black;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .desc {
+            padding: 15px;
+            text-align: center;
+        }
+        /* 根据屏幕尺寸响应 */
+        
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align:center">响应式图片相册</h2>
+
+    <div class="responsive">
+        <div class="img">
+            <a href="http://img2.imgtn.bdimg.com/it/u=3315324068,1694602888&fm=26&gp=0.jpg" target="_blank">
+                <img src="http://img2.imgtn.bdimg.com/it/u=3315324068,1694602888&fm=26&gp=0.jpg" alt="图2" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    </div>
+
+
+    <div class="responsive">
+        <div class="img">
+            <a href="http://img2.imgtn.bdimg.com/it/u=3315324068,1694602888&fm=26&gp=0.jpg" target="_blank">
+                <img src="http://img2.imgtn.bdimg.com/it/u=3315324068,1694602888&fm=26&gp=0.jpg" alt="图2" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="img">
+            <a href="http://img1.imgtn.bdimg.com/it/u=2922664179,3817800836&fm=26&gp=0.jpg" target="_blank">
+                <img src="http://img1.imgtn.bdimg.com/it/u=2922664179,3817800836&fm=26&gp=0.jpg" alt="图3" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="img">
+            <a href="http://img0.imgtn.bdimg.com/it/u=1690695730,746266934&fm=26&gp=0.jpg" target="_blank">
+                <img src="http://img0.imgtn.bdimg.com/it/u=1690695730,746266934&fm=26&gp=0.jpg" alt="图4" width="600" height="400">
+            </a>
+            <div class="desc">Add a description of the image here</div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div style="padding:6px;">
+
+        <h4>重置浏览器大小查看效果</h4>
+    </div>
+
+</body>
+
+</html>

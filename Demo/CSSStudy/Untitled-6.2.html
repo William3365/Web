@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>带箭头的提示框</title>
+</head>
+<style>
+    .t {
+        /* 容器使用此定位 */
+        position: relative;
+        display: inline-block;
+    }
+    
+    .t .tt {
+        visibility: hidden;
+        /* 内容使用此定位 */
+        position: absolute;
+        width: 120px;
+        background-color: #f1f1f1;
+        text-align: center;
+        z-index: 1;
+        /* 位置定位 */
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
+        /* 淡入 - 1秒内从 0% 到 100% 显示: 
+            透明度属性
+            过渡属性
+        */
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    /* 
+        伪元素：在元素之后插入新内容
+        使用双冒号   ：：
+    */
+    
+    .t .tt::after {
+        /* 该属性用于定义元素之前或之后放置的生成内容 */
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+    
+    .t:hover .tt {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+
+<bodys>
+    <br>
+    <br>
+    <br>
+    <div class="t">鼠标移动到这
+        <span class="tt">花里胡哨</span>
+    </div>
+
+</bodys>
+
+</html>

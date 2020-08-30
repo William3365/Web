@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js事件</title>
+</head>
+
+<body>
+	<h2>js事件</h2>
+	现在的时间是：
+	<p id="p1"></p>
+	<button type="button" onClick="myfunction()">显示时间</button>
+	<script>
+		function myfunction(){
+			document.getElementById("p1").innerHTML = Date();
+		}
+	</script>
+</body>
+</html>

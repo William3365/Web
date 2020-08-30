@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS的三种定义方式</title>
+	<!--链入式-->
+	<link href="css/blue.css" rel="stylesheet" type="text/css"/>
+	<!--内嵌式-->
+	<style type="text/css">
+		#p1{
+			font-size: 40px; 
+		}
+	</style>
+<!--后面的会覆盖前面的属性-->
+	<style type="text/css">
+		@import url("css/red.css");
+	</style>
+	
+</head>
+<!--
+	link和import导入的区别：
+		一般使用link，内嵌式，行内式，import作为补充
+		link是html的标签，页面打开时所引用的css文件被加载，js操作DOM可以改变link样式，权重高
+		import是css的语法，定义在css代码内，页面打开时需等页面加载完才能再加载，无法被js操作，权重低，影响性能
+-->
+<body>
+	<!--行内式-->
+	<p style="font-weight: 900; font-size: 20px;">花里胡哨</p>
+	<p id="p1">汤冯涛</p>
+</body>
+</html>

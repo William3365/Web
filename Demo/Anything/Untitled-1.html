@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS对象</title>
+</head>
+
+<body>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+
+	<script>
+		var txt = "";
+		//新建person对象包含5个属性
+		var person = {fname:"tft",sname:"william",e:20,like:"football"};
+		var x;
+		//向已有对象添加新属性
+		person.hh = "添加新属性";
+		//delete关键字，从对象中删除属性
+		delete person.like;
+		//遍历对象属性
+		for(x in person){
+			txt += person[x] + " ";
+		}
+		document.getElementById("demo").innerHTML = txt;
+	</script>
+	
+	<script>
+		//新建一个person对象，由三个属性和一个方法
+		var person = {
+            firstName: "Bill",
+            lastName : "Gates",
+            id       : 12345,
+			//对象方法是一种函数定义，存储为属性值
+			//this代表person对象，person对象拥有方法，方法作为对象
+            fullName : function() {
+				//this关键字，在函数中使用，是拥有该函数的对象
+               return this.firstName + " " + this.lastName;
+            }
+        };
+		//访问对象方法，必须带括号，否则将返回函数定义
+		document.getElementById("demo1").innerHTML = person.fullName();
+	</script>
+
+	<script>
+		var person = {firstName: "tft",lastName : "william",tName:"追风浪子"};
+		//向已有对象添加属性，函数作为对象属性
+		person.name = function() {
+  			return this.tName;
+		};
+		//访问对象方法带括号
+		document.getElementById("demo2").innerHTML = "我是--" + person.name();
+	</script>
+</body>
+</html>

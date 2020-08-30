@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML表单自动验证</title>
+</head>
+<!--
+	HTML 表单验证能够被浏览器自动执行：
+	如果表单字段（fname）是空的，required 属性防止表单被提交
+-->
+<body>
+	<h1>HTML表单自动验证</h1>
+	<p>如果单击"提交"，而不填写文本字段，您的浏览器将显示错误消息。</p>
+	<form action="/demo/action_page.php" method="post">
+  		<input type="text" name="fname" required>
+ 		<input type="submit" value="提交">
+	</form>
+</body>
+</html>

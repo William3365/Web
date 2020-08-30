@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 提示工具-Tooltip</title>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+            /* 将元素隐藏，但是在网页中该占的位置还是占着,
+            而display:none恰恰相反,隐藏元素但不占位置 */
+            visibility: hidden;
+            width: 120px;
+            background-color: #f1f1f1;
+            text-align: center;
+            border-radius: 5px;
+            position: absolute;
+            /* Z-index 仅能在定位元素上奏效 ,顺序高的在前面
+               z-index 属性设置元素的堆叠顺序*/
+            z-index: 1;
+        }
+        /* 当鼠标滑过tool时,tool-txt*/
+        
+        .tooltip:hover .tooltiptext {
+            /* 显示隐藏元素 */
+            visibility: visible;
+        }
+        /* 右边------------------------------- */
+        
+        .tooltip-1 {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip-1 .tooltiptext-1 {
+            visibility: hidden;
+            width: 120px;
+            background-color: #f1f1f1;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            /* 定位 */
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            /* 距离左边的距离是元素自身的105% */
+            left: 105%;
+        }
+        
+        .tooltip-1:hover .tooltiptext-1 {
+            visibility: visible;
+        }
+        /* 左边------------------------------- */
+        
+        .tooltip-2 {
+            position: relative;
+            display: inline-block;
+            margin-left: 300px;
+        }
+        
+        .tooltip-2 .tooltiptext-2 {
+            visibility: hidden;
+            width: 120px;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            right: 105%;
+        }
+        
+        .tooltip-2:hover .tooltiptext-2 {
+            visibility: visible;
+        }
+        /* 上边------------------------------- */
+        
+        .tooltip-3 {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip-3 .tooltiptext-3 {
+            visibility: hidden;
+            width: 120px;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 105%;
+            left: 59%;
+        }
+        
+        .tooltip-3:hover .tooltiptext-3 {
+            visibility: visible;
+        }
+        /* 下边------------------------------- */
+        
+        .tooltip-4 {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tooltip-4 .tooltiptext-4 {
+            visibility: hidden;
+            width: 120px;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 5px 0;
+            /* 定位 */
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: 50%;
+        }
+        
+        .tooltip-4:hover .tooltiptext-4 {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <p style="color: red;">用法:先定位,在定义\隐藏,最后显示</p>
+    <br>
+    <br>
+    <div class="tooltip">
+        基础提示框,,,鼠标移动到这里
+        <span class="tooltiptext">提示文本</span>
+    </div>
+    <br>
+    <br>
+    <div class="tooltip-1">
+        定位提示框,,,鼠标移动到这里,,,右边
+        <span class="tooltiptext-1">在右侧</span>
+    </div>
+    <br>
+    <br>
+    <div class="tooltip-2">
+        定位提示框,,,鼠标移动到这里,,,左边
+        <span class="tooltiptext-2">在左侧</span>
+    </div>
+    <br>
+    <br>
+    <div class="tooltip-3">
+        定位提示框,,,鼠标移动到这里,,,上边
+        <span class="tooltiptext-3">在上边</span>
+    </div>
+    <br>
+    <br>
+    <div class="tooltip-4">
+        定位提示框,,,鼠标移动到这里,,,下边
+        <span class="tooltiptext-4">下边</span>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js的显示方法</title>
+</head>
+
+<body>
+	<h2>js显示方法的demo</h2>
+	<p id="p1">这里</p>
+<!--写入html元素，改变html内容-->	
+	<script>
+		document.getElementById("p1").innerHTML=5+6;
+	</script>
+<!--写入html'输出-->
+	<script>
+		document.write(6+6);
+	</script>
+<!--警告框显示数据-->
+	<script>
+		window.alert("花里胡哨-警告框");
+	</script>
+<!--浏览器控制台显示数据-->
+	<script>
+		console.log("这是控制台显示的数据");
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM集合</title>
+</head>
+
+<body>
+	<p>William</p>
+	<p>will</p>
+	<p>w</p>
+	
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	
+	<script>
+		/*HTMLCollection 对象（！！！看起来是数组，但不是）
+			//getElementsByTagName() 方法返回 HTMLCollection 对象。
+				HTMLCollection 对象是类数组的 HTML 元素列表（集合）
+			//length 属性定义了 HTMLCollection 中元素的数量
+		*/
+		var myclliction = document.getElementsByTagName("p");
+		//通过索引访问元素
+		document.getElementById("demo").innerHTML = "第二段的innerHTML是：" + myclliction[1].innerHTML;
+		//5个p元素
+		document.getElementById("demo1").innerHTML = "此文档包含" + myclliction.length + "段文字";
+	</script>
+</body>
+</html>

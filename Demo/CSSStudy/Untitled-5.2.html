@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉菜单-2</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #555;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a,
+        .drop-bt {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover,
+        .drop:hover,
+        .drop-bt {
+            background-color: #333;
+        }
+        
+        .drop {
+            display: inline-block;
+        }
+        
+        .drop-con {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        
+        .drop-con a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .drop-con a:hover {
+            background-color: #555;
+            color: white;
+        }
+        
+        .drop:hover .drop-con {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>导航栏下拉菜单</h2>
+    <ul>
+        <li><a href="#">新闻</a></li>
+        <li><a href="#">注册</a></li>
+        <li><a href="#">登录</a></li>
+        <div class="drop">
+            <a href="#" class="drop-bt">下拉菜单</a>
+            <div class="drop-con">
+                <a href="#">汤冯涛</a>
+                <a href="#">冯涛</a>
+                <a href="#">涛</a>
+            </div>
+        </div>
+    </ul>
+</body>
+
+</html>

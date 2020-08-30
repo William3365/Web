@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式网页布局</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+        /* 头部样式 */
+        
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        /* 导航条 */
+        
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .column {
+            height: 900px;
+            float: left;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .column.side {
+            width: 25%;
+        }
+        
+        .column.middle {
+            width: 50%;
+            background-color: #999;
+        }
+        
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+        /* 清除浮动 */
+        
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* 响应式，小于600px改为上下布局 */
+        
+        @media screen and (max-width: 600px) {
+            .column.side,
+            .column.middle {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>创建一个 3 列布局，在小的屏幕上将会变成 1 列布局</h2>
+    <div class="header">
+        <h1>头部区域</h1>
+        <p>重置浏览器查看效果</p>
+    </div>
+
+    <div class="topnav">
+        <a href="#">链接</a>
+        <a href="#">链接</a>
+        <a href="#">链接</a>
+    </div>
+
+    <div class="row">
+        <div class="column side">
+            <h2>第1列</h2>
+            <p>花里胡哨</p>
+        </div>
+        <div class="column middle">
+            <h2>第2列</h2>
+            <p>花里胡哨</p>
+            <p>花里胡哨</p>
+        </div>
+        <div class="column side">
+            <h2>第2列</h2>
+            <p>花里胡哨</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>底部</p>
+    </div>
+</body>
+
+</html>

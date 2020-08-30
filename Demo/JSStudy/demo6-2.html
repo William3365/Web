@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML DOM 事件</title>
+	<style>
+		.div1{
+			width: 300px;
+			height: 200px;
+			background: #70CCED;
+			text-align:center;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>onmouseover 和 onmouseout 事件</h2>
+	<div class="div1" onMouseOver="mOver(this)" onMouseOut="mOut(this)">
+		<p>请把鼠标移上来(1)</p>
+	</div>
+	<script>
+		function mOver(obj){
+			obj.innerHTML = "汤冯涛最强男人！";
+		}
+		function mOut(obj){
+			obj.innerHTML = "请把鼠标移上来(2)";
+		}
+	</script>
+	
+	<h2>onmousedown, onmouseup 以及 onclick 事件</h2>
+	<div class="div1" onMouseDown="mDown(this)" onMouseUp="mUp(this)">
+		<p>点击鼠标(1)</p>
+	</div>
+	<script>
+		function mDown(obj){
+			obj.style.backgroundColor = "yellow";
+			obj.innerHTML = "松开鼠标";
+		}
+		function mUp(obj){
+			obj.style.backgroundColor = "red";
+			obj.innerHTML = "点击鼠标（2）";
+		}
+	</script>
+	
+	<h2 onMouseOver="style.color='red'" onMouseOut="style.color='blue'">鼠标移动到此改变文本颜色</h2>
+</body>
+</html>

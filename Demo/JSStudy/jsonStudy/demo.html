@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON-3</title>
+</head>
+
+<body>
+	<script>
+        //创建字符串。\"转义字符
+        var s1 = "{\"name\":\"盖伦\"";
+        var s2 = ",\"typ\":\"战士\"}";
+		document.write("<p>--通过字符串拼接得到一个JSON结构的字符串</p>");
+        //拼接字符串
+        var s3 = s1+s2;
+
+        document.write("这是一个JSON格式的字符串:" + s3);
+        document.write("<br><hr>");
+		document.write("<p>--JSON字符串转成JSON对象</p>");
+        //通过eval（）方法，将json格式字符串转成json对象
+        var hero = eval("("+s3+")");
+		//使用JQuery的$.parseJSON转换函数
+//		var hero = $.parseJSON(s3);
+        document.write("这是一个JSON对象: " + hero); 
+		document.write("<br><hr>");
+		document.write("<p>--JSON对象转成字符串</p>");
+		//通过 JSON.stringify（） 函数把JSON对象转换为字符串
+		var heroStr = JSON.stringify(hero);
+		document.write("这是一个json字符串" + heroStr);
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON对象</title>
+</head>
+<!--
+	对象值的访问
+	对象值的修改
+对象属性的遍历
+对象属性的删除
+-->
+<body>
+	<h1>使用点访问对象值</h1>
+	<p id="demo"></p>
+	<script>
+		var myObj, x;
+		myObj = {"name":"tft", "age":20, "sex":"boy"};
+		//使用点修改json对象的值
+		myObj.name = "william";
+		
+		x = myObj.name;
+		document.getElementById("demo").innerHTML = x;
+	</script>
+
+	<!--遍历对象属性-->
+	<h1>遍历对象属性</h1>
+	<p id="demo1"></p>
+	<script>
+		var myObj, x;
+		myObj = {"name":"tft", "age":20, "sex":"boy"};
+		//使用 delete 关键词来删除 JSON 对象的属性
+		delete myObj.sex;
+		for(x in myObj){
+					document.getElementById("demo1").innerHTML += x + "<br>";
+
+		}
+	</script>
+</body>
+</html>

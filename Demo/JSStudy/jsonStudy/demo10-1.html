@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>解析函数</title>
+</head>
+	<!--注意和demo10-5对比-->
+	
+<!--
+	JSON 中不允许函数。
+如果您需要包含函数，请把它写作字符串。
+稍后您可以把它转换回函数
+-->
+<body>
+	<h1>把字符串转换为函数</h1>
+	<p id="demo"></p>
+	<script>
+		var txt = '{"name":"tft","age":"function(){return 20;}","city":"xvzhou"}';
+		var obj = JSON.parse(txt);
+		//使用eval（）将函数字符串转成函数
+		obj.age = eval("(" + obj.age + ")");
+		document.getElementById("demo").innerHTML = obj.name + "," + obj.age();
+	</script>
+</body>
+</html>

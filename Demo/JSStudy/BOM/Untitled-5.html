@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+
+<body>
+    <h2>JavaScript 有三种类型的弹出框：警告框、确认框、提示框</h2>
+    <button onclick="myfunction()">警告框</button>
+    <button onclick="myfunction1()">确认框</button>
+    <button onclick="myfunction2()">提示框</button>
+    <p id="demo"></p>
+
+    <script>
+        function myfunction() {
+            alert("我是一个警告框！\n这是一个换行'\\n'");
+        }
+        // 如果用户单击“确定”，该框返回 true。如果用户单击“取消”，该框返回 false
+        function myfunction1() {
+            var txt;
+            if (confirm("请点击按钮")) {
+                txt = "你点了确定！";
+            } else {
+                txt = "你点了取消！";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+        //如果用户单击“确定”，该框返回输入值。如果用户单击“取消”，该框返回 NULL
+        function myfunction2() {
+            var x;
+            var person = prompt("请输入你的名字：", "");
+            if (person == null || person == "") {
+                x = "用户取消输入";
+            } else {
+                x = "你好，" + person + "！今天过得好吗？";
+            }
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>

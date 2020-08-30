@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>访问器：get和set关键字</title>
+</head>
+
+<body>
+	<p>getter 和 setter，允许通过方法获取和设置属性</p>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	
+	<!--以函数形式访问name：person.sname()-->
+	<script>
+		var person = {
+			fname:"William",
+			sname:"tft",
+			tname:"小王子",
+			name:function(){
+				return this.sname;
+			}
+		};
+		//使用方法显示来自对象的数据
+		document.getElementById("demo1").innerHTML = person.name();
+	</script>
+<!--
+以属性形式访问name：person.sname
+语法更简洁
+-->
+	<script>
+		var person = {
+			fname:"William",
+			sname:"tft",
+			tname:"小王子",
+			get name(){
+				return this.sname;
+			}
+		};
+		//使用getter显示来自对象的数据
+		document.getElementById("demo").innerHTML = person.name;
+	</script>
+<!--
+set
+使用 lang 属性将大写值存储在 language 属性中
+-->
+	<script>
+		// 创建对象：
+        var person = {
+          	firstName: "Bill",
+          	lastName : "Gates",
+          	language : "",
+			set lang(lang){
+				//转为大写,this代表当前对象，向已有对象添加属性
+				this.language = lang.toUpperCase();
+			}
+		};
+		//使用set设置属性
+		person.lang = "english";
+		document.getElementById("demo2").innerHTML = person.language;
+	</script>
+</body>
+</html>

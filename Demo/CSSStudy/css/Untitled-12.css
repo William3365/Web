@@ -1,0 +1,146 @@
+/* 解决浏览器自动生成边框问题*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+body {
+    /* 引入外部样式表，用../先到上一级文件夹中 
+        不重复
+    */
+    width: 1225px;
+    height: auto;
+    margin: 0 auto;
+    background: #333;
+    /* 全屏显示 */
+    background-size: cover;
+    padding: 15px;
+    line-height: 1.7;
+}
+
+.top {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    /*
+         两个值，左上右下和其他
+         四个值，左上右上和其他
+         像素值比百分比更有效     
+    */
+    border-radius: 15px;
+    margin-bottom: 15px;
+    /*固定！ */
+    /* position: fixed; */
+}
+
+.side_bar {
+    width: 240px;
+    height: auto;
+    float: left;
+    /* 
+        会产生继承性，让文字的透明度也改变
+        opacity: 0.3;
+     */
+    /* 目前比较好的解决方案 */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.logo {
+    width: 140px;
+    height: 53px;
+    font-size: 30px;
+    border: 2px solid #3faac0;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 15px;
+    /* 过渡效果 */
+    transition: width 2s;
+}
+
+.logo:hover {
+    width: 170px;
+}
+
+
+/* 新思路 */
+
+.nav,
+.tag_list {
+    margin-top: 10px;
+}
+
+.nav a {
+    font-weight: 700;
+}
+
+
+/* 父子选择器+并集选择器 */
+
+.nav>a,
+.tag_list>a {
+    color: seagreen;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    /* 过渡效果 */
+    transition: color 1s;
+}
+
+.nav>a:hover,
+.tag_list>a:hover {
+    color: #ff1717;
+    background-color: thistle;
+}
+
+.main {
+    width: 935px;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-left: 15px;
+    padding: 15px;
+}
+
+.main a:hover {
+    transition: color 1s;
+    color: #001ff7;
+}
+
+.art_lisy {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.art_lisy .item .title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.art_lisy .item .status {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #333;
+}
+
+.art_lisy .item .content {
+    text-indent: 2em;
+    margin: 10px 0;
+}
+
+#menu,
+#lable_menu {
+    display: none;
+}

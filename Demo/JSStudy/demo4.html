@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML DOM - 改变 CSS</title>
+</head>
+
+<body>
+	<p id="p1">Hello William</p>
+	<p id="p2">Hello 汤冯涛</p>
+	<p id="p3">汤冯涛是最强的男人！</p>
+	<h2 id="h_2">花里胡哨</h2>
+	
+<!--点击事件-->
+	<button type="button" onClick="document.getElementById('h_2').style.color = 'red'">点击</button><br>
+<!--使元素不可见-->
+	<input type="button" value="隐藏" onClick="document.getElementById('p3').style.visibility = 'hidden'"><br>
+	<button type="button" onClick="document.getElementById('p3').style.visibility = 'visible'">显示</button><br>
+	
+	<script>
+		//更改HTML元素的样式，语法
+		//document.getElementById(id).style.property = new style
+		document.getElementById("p1").style.color = "bule";
+		document.getElementById("p2").style.fontSize = "50px";
+	</script>
+</body>
+</html>

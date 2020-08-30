@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #555;
+}
+
+ul li {
+    float: left;
+}
+
+li:last-child {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #222;
+}
+
+li a.active {
+    background-color: #4CAF50;
+}
+
+
+/* 
+    媒体屏幕
+    and关键字,还有not,only等等
+    括号中放置媒体特性
+    当屏幕尺寸小于600px时，应用下面的CSS样式
+*/
+
+@media screen and (max-width:600px) {
+    ul li:last-child,
+    ul li {
+        float: none;
+    }
+}
