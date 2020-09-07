@@ -1,0 +1,136 @@
+/*外部边距*/
+			margin: 20px;
+/*边框,solid，实线，dashed，虚线*/
+			border-top: 1px solid #F36200;
+			border-bottom: 2px solid #D008F4;
+			border-left: 3px solid #F3070B;
+			border-right: 4px dashed #F7E606;
+/*内部边距*/ 
+			padding: 30px;
+-----------------------------------------------------			
+ /*clear:both;清除前面的浮动效果的影响*/
+		.four{
+			width: 100px;
+			height: 100px;
+			background: #3700F4;
+			clear:both;
+/*div默认垂直排列*/
+		.big_01{
+			width: 500px;
+/*
+高度不写，自适应
+			height: 300px;
+*/
+			border: 1px solid #0D41E5;
+/*
+overflow: hidden;溢出隐藏
+			overflow: hidden;
+*/
+		}
+/*float,浮动，水平排列*/
+		.one{
+			width: 100px;
+			height: 100px;
+			background: #EC080C;
+			float: left;
+		}            
+--------------------------------------------------
+    <ul >
+<!--type属性-->
+        <li type="1"> 汤冯涛 </li>
+        <li> william </li>
+        <li type="circle"> 冯涛 </li>
+		<li type="none">这个是没有点的</li>
+    </ul>
+<!--type设置符号类型属性，默认disc-->
+    <ul type="circle">
+        <li> 追风浪子 </li>
+        <li> 雷电法王 </li> 
+    </ul>
+    -----------------------------------
+    /*列表设置*/
+		ul{
+			list-style: none;
+			height: 40px;
+			width: 800px;
+			margin: auto;
+		}
+/*列表项，横向剧中排列*/
+		li{
+			float: left;
+			line-height: 10px;
+			padding: 15px;
+		}
+		a{
+			color: #999;
+			text-decoration: none;
+		}
+/*鼠标放上去字体变白*/
+		a:hover{
+			color: #FFF;
+		}
+---------------------------
+<!--
+XML语句
+	<svg width="400" height="300">
+		<circle cx="100" cy="100" r="50" stroke="red" stroke-width="2" fill="blue"/>
+	</svg>
+-->
+<!--img标签的title属性，提示信息-->
+	<img src="../images/LYF1.jpg" alt="刘亦菲-小龙女" title="小龙女" width="400"/>
+<!--占位-->
+	<img alt="图片暂时没准备" width="300" height="185"/>
+--------------------------
+  <style type="text/css">
+/*超链接颜色*/
+    a:link {
+      color: #F80D11;
+/*取消下划线*/
+      text-decoration: none;
+    }
+/*访问过*/
+    a:visited {
+      color: #A79D9D;
+      text-decoration: none;
+    }
+/*鼠标悬停*/
+    a:hover {
+      color: #0EED66;
+      text-decoration: underline;
+    }
+/*鼠标点击的一瞬间*/
+    a:active {
+      color: #FFE605;
+      text-decoration: none;
+    }
+  </style>	
+  --------------------
+  <!--pre标签，定义预格式文本-->
+      <!--br,单标签，换行-->
+	  <!--del标签，删除字效果。ins标签，插入字效果。p标签，定义段落-->
+	      <!--&nbsp;代表两个空格-->
+		  <!--cite标签，定义引用-->
+		  <!--blockquote标签，定义长引用-->
+    <blockquote cite="https://ke.qq.com/webcourse/index.html#cid=479830&term_id=100575278&taid=5842744660939350&vid=5285890798561637051"></blockquote>
+----------------------------------
+<!--
+	JavaScript 使 HTML 页面具有更强的动态和交互性
+-->
+</head>
+
+<body>
+<!--
+	<script> 标签用于定义客户端脚本
+	script 元素既可包含脚本语句，也可通过 src 属性指向外部脚本文件
+	必需的 type 属性规定脚本的 MIME 类型
+	JavaScript 最常用于图片操作、表单验证以及内容动态更新
+-->
+	<script type="text/javascript">
+		document.write("<h1>Hello World!</h1>")</script> 
+	<br>
+<!--
+	<noscript> 标签为不支持客户端脚本的浏览器定义替代内容。
+	noscript 元素可包含普通 HTML 页面的 body 元素中能够找到的所有元素
+	只有在浏览器不支持脚本或者禁用脚本时，才会作为替代内容显示 noscript 元素中的内容
+-->
+	<noscript>Sorry, your browser does not support JavaScript!</noscript>		
