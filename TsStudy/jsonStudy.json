@@ -1,0 +1,31 @@
+/* 1、 JSON 语法:
+    数据在名称 / 值对中
+数据由逗号分隔
+大括号 {} 保存对象
+中括号[] 保存数组， 数组可以包含多个对象
+
+2、 格式: 名称 / 值对包括字段名称（ 在双引号中）， 后面写一个冒号， 然后是值, "name": "菜鸟教程"，key 必须是字符串，value 可以是合法的 JSON 数据类型（字符串, 数字, 对象, 数组, 布尔值或 null）。key 和 value 中使用冒号(:)分割。每个 key/value 对使用逗号(,)分割。
+
+3、 JSON 值可以是：
+数字（ 整数或浮点数）
+字符串（ 在双引号中）
+逻辑值（ true 或 false）
+数组（ 在中括号中）
+对象（ 在大括号中）
+null
+
+4、XML 需要使用 XML 解析器来解析，JSON 可以使用标准的 JavaScript 函数来解析。
+JSON.parse(): 将一个 JSON 字符串转换为 JavaScript 对象。
+JSON.stringify(): 于将 JavaScript 值转换为 JSON 字符串
+*/
+
+
+{
+    "sites": [
+        { "name": "菜鸟教程", "url": "www.runoob.com" },
+        { "name": "google", "url": "www.google.com" },
+        { "name": "微博", "url": "www.weibo.com" }
+    ]
+}
+
+//https://www.runoob.com/json/js-json-objects.html，学到了对象
